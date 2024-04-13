@@ -19,32 +19,86 @@
 
 		<!-- CSS Stylesheet Link -->
 		<link rel="stylesheet" href="css/style.css" />
-
-		<!-- Favicon (optional) -->
-		<link rel="icon" type="image/png" href="favicon.png" />
-
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<!-- JavaScript Link (at the end of the body for better performance) -->
-		<script src="js/script.js" defer></script>
 	</head>
 	<body>
-		<!-- Your HTML content goes here -->
-		<div id="preloader">
-			<img
-				src="img/preloader.gif" />
-		</div>
-		<div id="container">
-			<img
-				src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg" />
-			<img
-				src="https://images.pexels.com/photos/1575861/pexels-photo-1575861.jpeg" />
-			<img
-				src="https://images.pexels.com/photos/7902914/pexels-photo-7902914.jpeg" />
-			<img
-				src="https://images.pexels.com/photos/7902946/pexels-photo-7902946.jpeg" />
-			<img
-				src="https://images.pexels.com/photos/3077671/pexels-photo-3077671.jpeg" />
-			<img
-				src="https://images.pexels.com/photos/982673/pexels-photo-982673.jpeg" />
-		</div>
+		<header class="header">
+			<div class="navbar-left">
+				<span class="material-symbols-outlined"> store </span>
+				<a href="index.html">STORE KA NAAM</a>
+			</div>
+			<nav class="navbar">
+				<a href="#home">Home</a>
+				<a href="#features">Features</a>
+				<a href="#products">Products</a>
+				<a href="#categories">Categories</a>
+				<a href="#review">Review</a>
+				<a href="#blogs">Blogs</a>
+			</nav>
+			<div class="navbar-right">
+				<span class="material-symbols-outlined" id="menu-btn">
+					menu
+				</span>
+				<span class="material-symbols-outlined" id="search-btn">
+					search </span
+				><span class="material-symbols-outlined" id="shopping-cart-btn">
+					shopping_cart </span
+				><span class="material-symbols-outlined" id="user-btn">
+					person
+				</span>
+			</div>
+			<form class="search-box">
+				<input
+					type="search"
+					id="search-box"
+					placeholder="Search Here" />
+				<label for="search-box"
+					><span class="material-symbols-outlined">
+						search
+					</span></label
+				>
+			</form>
+			<div class="shopping-cart">
+				<div class="box">
+					<span class="material-symbols-outlined" id="user-btn">
+						delete
+					</span>
+					<img src="image/cart-img-1.png" />
+					<div class="content">
+						<h3>Watermelon</h3>
+						<span class="price">Rs 50/-</span>
+						<span class="quantity">Qty : 1</span>
+					</div>
+				</div>
+				<div class="box">
+					<span class="material-symbols-outlined" id="user-btn">
+						delete
+					</span>
+					<img src="image/cart-img-2.png" />
+					<div class="content">
+						<h3>Onion</h3>
+						<span class="price">Rs 50/-</span>
+						<span class="quantity">Qty : 1</span>
+					</div>
+				</div>
+				<div class="box">
+					<span class="material-symbols-outlined" id="user-btn">
+						delete
+					</span>
+					<img src="image/cart-img-3.png" />
+					<div class="content">
+						<h3>Chicken</h3>
+						<span class="price">Rs 120/-</span>
+						<span class="quantity">Qty : 1</span>
+					</div>
+				</div>
+				<div class="total">Total : Rs 200/-</div>
+				<a href="#" class="btn">Order Now</a>
+			</div>
+		</header>
+		<script src="js/script.js"></script>
 	</body>
 </html>
