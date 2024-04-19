@@ -7,9 +7,6 @@
 	--border: 0.5rem solid black;
 	--outline: 0.1rem solid black;
 }
-.tab {
-	background-color: #0000ff; /* Default color */
-}
 * {
 	margin: 0;
 	padding: 0;
@@ -239,6 +236,33 @@ section {
 .header .sign-in.active {
 	right: 2rem;
 	transition: 0.4s linear;
+}
+.home {
+	display: flex;
+	justify-content: center;
+	background: url(../image/banner-img.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 17rem;
+	padding-bottom: 10rem;
+}
+.home .container {
+	text-align: center;
+	width: 60rem;
+}
+.home .container h3 {
+	color: var(--black);
+	font-size: 3rem;
+}
+.home .container h3 span {
+	color: var(--green);
+}
+
+.home .container p {
+	color: var(--light);
+	font-size: 1.7rem;
+	padding: 1rem 0;
+	line-height: 1.8;
 }
 .features .box-container {
 	display: grid;
