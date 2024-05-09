@@ -1,0 +1,80 @@
+#container {
+	display: none;
+}
+.preloader {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.preloader .ashoka_chakra {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+.preloader .ashoka_chakra img {
+	width: 10vh;
+	height: 10vh;
+	animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.preloader ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(90deg);
+	display: flex;
+}
+.preloader ul li {
+	list-style: none;
+	width: 10vh;
+	height: 60vh;
+	margin: 0;
+	padding: 0;
+	animation: loading 0.6s infinite alternate;
+}
+
+@keyframes loading {
+	0% {
+		transform: scaleY(0);
+	}
+	25% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+	75% {
+		transform: scaleY(1);
+	}
+	100% {
+		transform: scaleY(2);
+	}
+}
+
+.preloader ul li:nth-child(1) {
+	background-color: #ff671f;
+	animation-delay: 0.1s;
+}
+.preloader ul li:nth-child(2) {
+	background-color: #fff;
+	animation-delay: 0.2s;
+}
+.preloader ul li:nth-child(3) {
+	background-color: #046a38;
+	animation-delay: 0.3s;
+}

@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--green: #046a38;
+	--theme: #ff671f;
+	--black: #000;
+	--light: #333;
+	--box-shadow: 0 0.5rem 1.5rem black;
+	--border: 0.5rem solid black;
+	--outline: 0.1rem solid black;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	transition: all 0.2s linear;
+	font-family: "Poppins", Arial, sans-serif;
+}
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 7rem;
+}
+body {
+	background: #eee;
+}
+
+section {
+	padding: 2rem 9%;
+}
+
+.heading {
+	text-align: center;
+	padding: 2rem 0;
+	padding-bottom: 3rem;
+	font-size: 3.5rem;
+	color: var(--black);
+}
+.heading span {
+	background: var(--theme);
+	color: #fff;
+	display: inline-block;
+	padding: 0.5rem 3rem;
+	clip-path: polygon(100% 0%, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.btn {
+	margin-top: 1rem;
+	display: inline-block;
+	padding: 0.8rem 3rem;
+	font-size: 1.7rem;
+	border: 0.2rem solid var(--black);
+	border-radius: 0.5rem;
+	color: var(--black);
+	cursor: pointer;
+	background: none;
+}
+.btn:hover {
+	background: linear-gradient(to right, var(--green), #fff);
+	background-size: 200% 200%;
+	animation: animateButtonBackground 1s linear forwards;
+	color: #fff;
+}
+@keyframes animateButtonBackground {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 9%;
+	background: #fff;
+	box-shadow: var(--box-shadow);
+}
+.header .navbar-left span {
+	color: var(--theme);
+	font-size: 2.5rem;
+	font-weight: bolder;
+}
+.header .navbar-left a {
+	text-decoration: none;
+	color: var(--black);
+}
+.header .navbar-left a:hover {
+	color: var(--green);
+}
+.header .navbar a {
+	font-size: 1.7rem;
+	margin: 0 1rem;
+	color: var(--black);
+}
+
+.header .navbar a:hover {
+	color: var(--green);
+}
+.header .navbar-right span {
+	font-size: 2.5rem;
+	height: 4.5rem;
+	width: 4.5rem;
+	line-height: 4.5rem;
+	border-radius: 0.5rem;
+	background: #eee;
+	color: var(--black);
+	margin-right: 0.3rem;
+	text-align: center;
+}
+.header .navbar-right span:hover {
+	background: var(--green);
+	color: white;
+	cursor: pointer;
+}
+#menu-btn {
+	display: none;
+}
+
+.header .navbar.active {
+	right: 2rem;
+	transition: 0.4s linear;
+}
+.footer {
+	background: #fff;
+}
+.footer .box-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+	gap: 1.5rem;
+}
+.footer .box-container .box h3 {
+	font-size: 2.5rem;
+	color: var(--black);
+	padding: 1rem 0;
+}
+.footer .box-container .box h3 span {
+	color: var(--theme);
+	display: flex;
+	padding-right: 0.5rem;
+}
+.footer .box-container .box .links {
+	display: block;
+	font-size: 1.5rem;
+	color: var(--light);
+	padding: 1rem 0;
+}
+
+.footer .box-container .box .links i {
+	color: var(--theme);
+	padding-right: 0.5rem;
+}
+.footer .box-container .box .links:hover i {
+	padding-right: 2rem;
+}
+.footer .box-container .box p {
+	line-height: 1.8;
+	font-size: 1.5rem;
+	color: var(--light);
+	padding: 1rem 0;
+}
+.footer .box-container .box .share a {
+	height: 4rem;
+	width: 4rem;
+	line-height: 4rem;
+	border-radius: 0.5rem;
+	font-size: 2rem;
+	color: var(--black);
+	margin-left: 0.2rem;
+	background: #eee;
+	text-align: center;
+	display: inline-block;
+}
+.footer .box-container .box .share a:hover {
+	background: var(--green);
+	color: #fff;
+}
+.footer .box-container .box .email {
+	width: 100%;
+	margin: 0.7rem 0;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background: #eee;
+	font-size: 1.6rem;
+	color: var(--black);
+	text-transform: none;
+}
+.footer .box-container .box img {
+	margin-top: 2rem;
+	height: 3rem;
+}
+.footer .credits {
+	text-align: center;
+	margin-top: 2rem;
+	padding: 1rem;
+	padding-top: 2.5rem;
+	font-size: 2rem;
+	color: var(--black);
+	border-top: var(--border);
+}
+.footer .credits span {
+	color: var(--theme);
+}
+/*
+.selector {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	width: 100vw;
+	padding-top: 8.5rem;
+	background: linear-gradient(90deg, var(--theme), var(--green));
+} 
+.selector span {
+	cursor: pointer;
+	margin: 2rem 0;
+	color: #fff;
+	font-weight: bolder;
+	width: 50%;
+	height: auto;
+	font-size: 2rem;
+	text-align: center;
+	transition: 0.2s linear;
+}
+.selector .grocery:hover {
+	width: 60vw;
+	height: auto;
+	font-size: 2.5rem;
+}
+.selector .fruits-and-vegetables:hover {
+	width: 60vw;
+	height: auto;
+	font-size: 2.5rem;
+}
+.selector .grocery .active {
+	width: 90vw;
+	height: auto;
+	font-size: 2rem;
+}
+.selector .fruits-and-vegetables .active {
+	width: 90vw;
+	height: auto;
+	font-size: 2rem;
+}
+.selector .grocery .active:hover {
+	width: 90vw;
+	height: auto;
+	font-size: 2rem;
+}
+.selector .fruits-and-vegetables .active:hover {
+	width: 90vw;
+	height: auto;
+	font-size: 2rem;
+}*/
+.selector {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	width: 100vw;
+	padding-top: 8.5rem;
+	background: linear-gradient(90deg, var(--theme), var(--green));
+}
+
+.selector span {
+	cursor: pointer;
+	margin: 2rem 0;
+	color: #fff;
+	font-weight: bolder;
+	width: 50%;
+	height: auto;
+	font-size: 2rem;
+	text-align: center;
+	transition: 0.2s linear;
+}
+
+.selector span:hover {
+	width: 60vw;
+	height: auto;
+	font-size: 2.5rem;
+}
+
+.selector span.active::before {
+	content: "\e5ca";
+	font-family: "Material Symbols Rounded";
+	font-variation-settings:
+		"FILL" 0,
+		"wght" 400,
+		"GRAD" 200,
+		"opsz" 24;
+	color: #fff;
+	vertical-align: middle;
+}
+
+.selector span.active {
+	width: 100%;
+	height: auto;
+	font-size: 2.5rem;
+}
+
+.selector span.active:hover {
+	width: 100%;
+	height: auto;
+	font-size: 2.5rem;
+}
+
+.search-box {
+	width: auto;
+	height: auto;
+	background: #fff;
+	border-radius: 5rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	box-shadow: var(--box-shadow);
+}
+
+.search-box input {
+	height: 100%;
+	width: 100%;
+	background: none;
+	text-transform: none;
+	font-size: 1.6rem;
+	color: var(--black);
+	padding: 0 1.5rem;
+}
+
+.search-box label {
+	font-size: 3rem;
+	padding-right: 1.5rem;
+	color: var(--black);
+	cursor: pointer;
+}
+
+.search-box label:hover {
+	color: var(--green);
+}
+.product-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 2rem;
+	width: 100%;
+}
+
+.product-container .box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+	background: #fff;
+	outline: var(--outline);
+	outline-offset: -1rem;
+	text-align: center;
+	padding: 2rem 1rem;
+	transition: 0.2s linear;
+}
+
+.product-container .box:hover {
+	box-shadow: 1px 1px 10px 4px var(--green);
+}
+.product-image {
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.product-image img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.product-details {
+	padding-left: 2rem;
+	text-align: left;
+}
+
+.title {
+	font-size: 2.5rem;
+}
+.general {
+	font-size: 1.5rem;
+	color: var(--light);
+}
+
+.product_mrp_section {
+	display: flex;
+	align-items: baseline;
+}
+.mrp {
+	padding-left: 0.5rem;
+	color: #f00;
+	font-size: 1.5rem;
+	text-decoration: line-through;
+}
+.offer {
+	padding-left: 0.5rem;
+	font-size: 1.5rem;
+	color: var(--green);
+}
+.price {
+	color: #000;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.back-to-top .btn {
+	background: linear-gradient(to right, var(--theme), #fff);
+	background-size: 200% 200%;
+	animation: animateButtonBackground 1s linear forwards;
+	width: 6rem;
+	height: 6rem;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	padding: 0;
+	color: var(--black);
+}
+.back-to-top .btn span {
+	font-size: 4rem;
+}
+.back-to-top .btn:hover {
+	background: linear-gradient(to right, var(--green), #fff);
+	background-size: 200% 200%;
+	animation: animateButtonBackground 1s linear forwards;
+	color: #fff;
+}
